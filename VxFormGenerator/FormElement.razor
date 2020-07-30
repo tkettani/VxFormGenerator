@@ -6,6 +6,6 @@
     <label class="form-control-label" for="@Id">@Label</label>
 }
 
-@CreateComponent(FieldIdentifier)
+<VxFormElementLoader @bind-Value="@FieldValue"></VxFormElementLoader>
 
 <VxFormGenerator.Validation.VxValidationMessage For="@FieldExpression" Class="poep" ></VxFormGenerator.Validation.VxValidationMessage>

@@ -10,7 +10,7 @@ namespace VxFormGenerator.Components
     {
         public BootstrapFormElementComponent()
         {
-            DefaultFieldClasses = new List<string>() { "form-control"};
+           // DefaultFieldClasses = new List<string>() { "form-control"};
             CssClasses = new List<string>() { "form-group", "row" };
         }
     }
