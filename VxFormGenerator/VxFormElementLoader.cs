@@ -73,6 +73,7 @@ namespace VxFormGenerator
             // Get the mapped control based on the property type
             var componentType = _repo.GetComponent(FormElementType);
 
+
             if (componentType == null)
                 return;
             //  throw new Exception($"No component found for: {propInfoValue.PropertyType.ToString()}");

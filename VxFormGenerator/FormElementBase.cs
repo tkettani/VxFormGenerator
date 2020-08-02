@@ -76,7 +76,7 @@ namespace VxFormGenerator
             get
             {
                 if (fieldValue == null)
-                {
+                { 
                     fieldValue = (TFormElement)FieldIdentifier.GetValue(CascadedEditContext.Model);
                 }
                 return fieldValue;

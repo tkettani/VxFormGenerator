@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormGeneratorDemo", "Demo\F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VxFormGenerator", "VxFormGenerator\VxFormGenerator.csproj", "{EDEF4FEC-5088-4DF5-B057-2CDA074505EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VxFormGeneratorTests", "VxFormGeneratorTests\VxFormGeneratorTests.csproj", "{426353D8-AACE-4831-8492-7E10327A6BFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EDEF4FEC-5088-4DF5-B057-2CDA074505EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDEF4FEC-5088-4DF5-B057-2CDA074505EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDEF4FEC-5088-4DF5-B057-2CDA074505EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{426353D8-AACE-4831-8492-7E10327A6BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{426353D8-AACE-4831-8492-7E10327A6BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{426353D8-AACE-4831-8492-7E10327A6BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{426353D8-AACE-4831-8492-7E10327A6BFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
