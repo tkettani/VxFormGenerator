@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VxFormGenerator.Components.Bootstrap
+namespace VxBootstrapFormComponents.Components
 {
     public class BootstrapInputTextComponent : Microsoft.AspNetCore.Components.Forms.InputText
     {      

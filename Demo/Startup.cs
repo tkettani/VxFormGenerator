@@ -11,24 +11,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using VxFormGenerator;
 using VxFormGenerator.Components;
-using VxFormGenerator.Components.Bootstrap;
+
 using VxFormGenerator.Components.Plain;
 
 namespace FormGeneratorDemo
 {
     public class Startup
     {
-        public FormGeneratorComponentsRepository BootstrapFormMapping = new FormGeneratorComponentsRepository(
-                  new Dictionary<string, Type>()
-                  {
-                        {typeof(string).ToString(), typeof(BootstrapInputText) },
-                        {typeof(DateTime).ToString(), typeof(InputDate<>) },
-                        {typeof(bool).ToString(), typeof(BootstrapInputCheckbox) },
-                        {typeof(FoodKind).ToString(), typeof(BootstrapInputSelectWithOptions<>) },
-                        {typeof(ValueReferences<FoodKind>).ToString(), typeof(BootstrapInputCheckboxMultiple<>) },
-                        {typeof(decimal).ToString(), typeof(BootstrapInputNumber<>) },
-                        {typeof(Color).ToString(), typeof(InputColor) }
-                  }, null, typeof(BootstrapFormElement<>));
+        public FormGeneratorComponentsRepository BootstrapFormMapping = new VxBootstrapFormComponents.VxBootstrapFormComponentsRepository();
 
         public FormGeneratorComponentsRepository PlainFormMapping = new FormGeneratorComponentsRepository(
                  new Dictionary<string, Type>()
@@ -42,7 +32,7 @@ namespace FormGeneratorDemo
                         {typeof(Color).ToString(), typeof(InputColor) }
                  }, null, typeof(FormElement<>));
 
-        public FormGeneratorComponentsRepository BootstrapPlainFormMapping = new FormGeneratorComponentsRepository(
+   /*     public FormGeneratorComponentsRepository BootstrapPlainFormMapping = new FormGeneratorComponentsRepository(
                new Dictionary<string, Type>()
                {
                         {typeof(string).ToString(), typeof(InputText) },
@@ -52,7 +42,7 @@ namespace FormGeneratorDemo
                         {typeof(ValueReferences<FoodKind>).ToString(), typeof(InputCheckboxMultipleWithChildren<>) },
                         {typeof(decimal).ToString(), typeof(InputNumber<>) },
                         {typeof(Color).ToString(), typeof(InputColor) }
-               }, null, typeof(BootstrapFormElement<>));
+               }, null, typeof(BootstrapFormElement<>));*/
 
 
         public Startup(IConfiguration configuration)

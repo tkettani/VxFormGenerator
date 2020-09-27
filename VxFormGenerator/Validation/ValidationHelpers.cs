@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VxFormGenerator.Components.Bootstrap
+namespace VxFormGenerator.Validation
 {
     public static class ValidationHelpers
     {

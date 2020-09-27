@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VxFormGenerator;
 
-namespace VxFormGenerator.Components.Bootstrap
+namespace VxBootstrapFormComponents
 {
 
     public class BootstrapFormElementComponent<TFormElement> : FormElementBase<TFormElement>

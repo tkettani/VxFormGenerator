@@ -8,11 +8,15 @@ namespace VxFormGenerator
 
     public class FormGeneratorComponentsRepository
     {
-        private Dictionary<string, Type> _ComponentDict = new Dictionary<string, Type>();
+        protected Dictionary<string, Type> _ComponentDict = new Dictionary<string, Type>();
 
-        public Type _DefaultComponent { get; private set; }
-        public Type FormElementComponent { get; private set; }
+        public Type _DefaultComponent { get; protected set; }
+        public Type FormElementComponent { get; protected set; }
 
+        public FormGeneratorComponentsRepository()
+        {
+           
+        }
 
         public FormGeneratorComponentsRepository(Dictionary<string, Type> componentRegistrations, Type defaultComponent)
         {

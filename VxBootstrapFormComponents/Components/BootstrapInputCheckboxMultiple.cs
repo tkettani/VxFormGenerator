@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using VxFormGenerator;
 using VxFormGenerator.Components.Plain;
 
-namespace VxFormGenerator.Components.Bootstrap
+namespace VxBootstrapFormComponents.Components
 {
     public class BootstrapInputCheckboxMultiple<TValue> : InputCheckboxMultipleWithChildren<TValue>, IRenderChildren
     {
@@ -15,10 +16,11 @@ namespace VxFormGenerator.Components.Bootstrap
             this.AdditionalAttributes = new Dictionary<string, object>() { { "class", "form-control" } };
         }
 
-        public static new void RenderChildren(RenderTreeBuilder builder,
+        public static void RenderChildren(RenderTreeBuilder builder,
          int index,
          object dataContext,
-         string fieldIdentifier)
+         string fieldIdentifier,
+         Type type)
         {
             RenderChildren(builder, index, dataContext, fieldIdentifier, typeof(BootstrapInputCheckbox));
         }

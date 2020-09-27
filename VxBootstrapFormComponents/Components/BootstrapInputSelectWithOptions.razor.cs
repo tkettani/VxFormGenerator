@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using VxFormGenerator.Components.Plain;
 
-namespace VxFormGenerator.Components.Bootstrap
+namespace VxBootstrapFormComponents.Components
 {
     public class BootstrapInputSelectWithOptionsComponent<TValue>: InputSelectWithOptions<TValue>
     {
