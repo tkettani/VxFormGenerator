@@ -9,18 +9,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using VxFormGenerator;
-using VxFormGenerator.Components;
-
-using VxFormGenerator.Components.Plain;
+using VxFormGenerator.Repository;
 
 namespace FormGeneratorDemo
 {
     public class Startup
     {
-        public FormGeneratorComponentsRepository BootstrapFormMapping = new VxBootstrapFormComponents.VxBootstrapFormComponentsRepository();
 
-        public FormGeneratorComponentsRepository PlainFormMapping = new FormGeneratorComponentsRepository(
+       /* public FormGeneratorComponentsRepository PlainFormMapping = new FormGeneratorComponentsRepository(
                  new Dictionary<string, Type>()
                  {
                         {typeof(string).ToString(), typeof(InputText) },
@@ -30,7 +26,7 @@ namespace FormGeneratorDemo
                         {typeof(ValueReferences<FoodKind>).ToString(), typeof(InputCheckboxMultiple<>) },
                         {typeof(decimal).ToString(), typeof(InputNumber<>) },
                         {typeof(Color).ToString(), typeof(InputColor) }
-                 }, null, typeof(FormElement<>));
+                 }, null, typeof(FormElement<>));*/
 
    /*     public FormGeneratorComponentsRepository BootstrapPlainFormMapping = new FormGeneratorComponentsRepository(
                new Dictionary<string, Type>()
@@ -58,7 +54,7 @@ namespace FormGeneratorDemo
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton(BootstrapFormMapping);
+            services.AddSingleton<FormGeneratorComponentModelBasedRepository, VxBootstrapFormComponents.VxBootstrapFormComponentsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

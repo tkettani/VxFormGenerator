@@ -5,25 +5,26 @@ using System.Drawing;
 using System.Text;
 using VxBootstrapFormComponents.Components;
 using VxFormGenerator;
+using VxFormGenerator.Repository;
 
 namespace VxBootstrapFormComponents
 {
-    public class VxBootstrapFormComponentsRepository : FormGeneratorComponentsRepository
+    public class VxBootstrapFormComponentsRepository : FormGeneratorComponentModelBasedRepository
     {
         public VxBootstrapFormComponentsRepository()
         {
 
-            _ComponentDict = new Dictionary<string, Type>()
+            _ComponentDict = new Dictionary<Type, Type>()
                   {
-                        {typeof(string).ToString(), typeof(BootstrapInputText) },
-                        {typeof(DateTime).ToString(), typeof(InputDate<>) },
-                        {typeof(bool).ToString(), typeof(BootstrapInputCheckbox) },
-                        {typeof(Enum).ToString(), typeof(BootstrapInputSelectWithOptions<>) },
-                        {typeof(ValueReferences<Enum>).ToString(), typeof(BootstrapInputCheckboxMultiple<>) },
-                        {typeof(decimal).ToString(), typeof(BootstrapInputNumber<>) }
+                        {typeof(string), typeof(BootstrapInputText) },
+                        {typeof(DateTime), typeof(InputDate<>) },
+                        {typeof(bool), typeof(BootstrapInputCheckbox) },
+                        {typeof(Enum), typeof(BootstrapInputSelectWithOptions<>) },
+                        {typeof(ValueReferences<Enum>), typeof(BootstrapInputCheckboxMultiple<>) },
+                        {typeof(decimal), typeof(BootstrapInputNumber<>) }
                        // {typeof(Color).ToString(), typeof(InputColor) }
                   };
-            _DefaultComponent = null;
+            DefaultComponent = null;
             FormElementComponent = typeof(BootstrapFormElement<>);
             
         }

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 using VxFormGenerator.Components.Plain;
+using VxFormGenerator.Repository;
 
 namespace VxFormGenerator
 {
@@ -16,7 +17,9 @@ namespace VxFormGenerator
     /// <typeparam name="TValue">The type of the property</typeparam>
     public class VxFormElementLoader<TValue> : OwningComponentBase
     {
-        private FormGeneratorComponentsRepository _repo;
+        [Inject]
+        private IFormGeneratorComponentsRepository Repo { get; set; }
+
 
         /// <summary>
         /// Contains the Value binding methods and the key of the property.
@@ -27,8 +30,6 @@ namespace VxFormGenerator
         {
             base.OnInitialized();
 
-            // setup the repo containing the mappings
-            _repo = ScopedServices.GetService(typeof(FormGeneratorComponentsRepository)) as FormGeneratorComponentsRepository;
         }
 
         /// <summary>
@@ -40,7 +41,7 @@ namespace VxFormGenerator
             base.BuildRenderTree(builder);
 
             // Get the registered FormElement component. 
-            var elementType = _repo.FormElementComponent;
+            var elementType = Repo.FormElementComponent;
 
             // When the elementType that is rendered is a generic Set the propertyType as the generic type
             if (elementType.IsGenericTypeDefinition)
