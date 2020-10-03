@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Components.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using VxFormGenerator.Components.Plain;
 
 namespace VxFormGenerator.Repository
 {
@@ -11,26 +9,11 @@ namespace VxFormGenerator.Repository
         protected Dictionary<TKey, Type> _ComponentDict = new Dictionary<TKey, Type>();
 
         public Type DefaultComponent { get; protected set; }
-        public Type FormElementComponent { get;  protected set; }
 
         public FormGeneratorComponentsRepository()
         {
 
         }
-
-        public FormGeneratorComponentsRepository(Dictionary<TKey, Type> componentRegistrations, Type defaultComponent)
-        {
-            _ComponentDict = componentRegistrations;
-            DefaultComponent = defaultComponent;
-            FormElementComponent = typeof(FormElement<>);
-        }
-        public FormGeneratorComponentsRepository(Dictionary<TKey, Type> componentRegistrations, Type defaultComponent, Type formElement)
-        {
-            _ComponentDict = componentRegistrations;
-            DefaultComponent = defaultComponent;
-            FormElementComponent = formElement;
-        }
-
 
         protected void RegisterComponent(TKey key, Type component)
         {

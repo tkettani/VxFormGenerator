@@ -25,7 +25,6 @@ namespace VxBootstrapFormComponents
                        // {typeof(Color).ToString(), typeof(InputColor) }
                   };
             DefaultComponent = null;
-            FormElementComponent = typeof(BootstrapFormElement<>);
             
         }
      

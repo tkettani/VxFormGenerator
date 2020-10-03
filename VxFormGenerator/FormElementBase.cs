@@ -16,7 +16,7 @@ namespace VxFormGenerator
     {
         private string _Label;
 
-        [Inject]
+        //[Inject]
         private IFormGeneratorComponentsRepository Repo { get; set; }
         /// <summary>
         /// Bindable property to set the class

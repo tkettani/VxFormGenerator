@@ -18,8 +18,8 @@ namespace VxFormGenerator
     public class VxFormElementLoader<TValue> : OwningComponentBase
     {
         [Inject]
-        private IFormGeneratorComponentsRepository Repo { get; set; }
-
+        private IFormGeneratorOptions Options { get; set; }
+       
 
         /// <summary>
         /// Contains the Value binding methods and the key of the property.
@@ -41,7 +41,7 @@ namespace VxFormGenerator
             base.BuildRenderTree(builder);
 
             // Get the registered FormElement component. 
-            var elementType = Repo.FormElementComponent;
+            var elementType = Options.FormElementComponent;
 
             // When the elementType that is rendered is a generic Set the propertyType as the generic type
             if (elementType.IsGenericTypeDefinition)
