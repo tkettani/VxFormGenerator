@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using FormGeneratorDemo.Components;
-using FormGeneratorDemo.Data;
+
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components.Forms;
+
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -56,8 +52,9 @@ namespace FormGeneratorDemo
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<IFormGeneratorComponentsRepository>(new VxBootstrapFormComponentsRepository());
-            services.AddSingleton<IFormGeneratorOptions>(new VxBootstrapFormOptions());
+            services.AddSingleton(typeof(IFormGeneratorComponentsRepository), new VxBootstrapFormComponentsRepository());
+            services.AddSingleton(typeof(IFormGeneratorOptions), new VxBootstrapFormOptions());
+
 
         }
 

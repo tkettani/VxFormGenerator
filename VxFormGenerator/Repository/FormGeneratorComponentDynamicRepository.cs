@@ -6,5 +6,6 @@ namespace VxFormGenerator.Repository
 {
     public class FormGeneratorComponentDynamicRepository: FormGeneratorComponentsRepository<string>
     {
+     
     }
 }

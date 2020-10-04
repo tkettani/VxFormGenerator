@@ -24,7 +24,8 @@ namespace VxBootstrapFormComponents
                         {typeof(decimal), typeof(BootstrapInputNumber<>) }
                        // {typeof(Color).ToString(), typeof(InputColor) }
                   };
-            DefaultComponent = null;
+            _DefaultComponent = null;
+         
             
         }
      

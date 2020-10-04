@@ -15,9 +15,9 @@ namespace VxFormGenerator
     public class FormElementBase<TFormElement> : OwningComponentBase
     {
         private string _Label;
-
-        //[Inject]
-        private IFormGeneratorComponentsRepository Repo { get; set; }
+        
+        [Inject]
+        protected IFormGeneratorComponentsRepository Repo { get; set; }
         /// <summary>
         /// Bindable property to set the class
         /// </summary>
