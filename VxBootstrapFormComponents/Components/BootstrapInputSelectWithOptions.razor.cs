@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using VxFormGenerator.Components.Plain;
+using VxFormComponents.Components;
 
 namespace VxBootstrapFormComponents.Components
 {

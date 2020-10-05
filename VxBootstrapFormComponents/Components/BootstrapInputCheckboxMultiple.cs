@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using VxFormGenerator;
-using VxFormGenerator.Components.Plain;
+using VxFormComponents.Components;
 
 namespace VxBootstrapFormComponents.Components
 {

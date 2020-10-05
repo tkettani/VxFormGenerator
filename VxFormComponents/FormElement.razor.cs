@@ -1,5 +1,7 @@
 ﻿
-namespace VxFormGenerator.Components.Plain
+using VxFormGenerator;
+
+namespace VxFormComponents
 {
     public class FormElementComponent<TFormElement> : FormElementBase<TFormElement>
     {

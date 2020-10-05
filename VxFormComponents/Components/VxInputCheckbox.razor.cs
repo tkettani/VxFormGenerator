@@ -2,8 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using VxFormGenerator;
 
-namespace VxFormGenerator.Components.Plain
+namespace VxFormComponents.Components
 {
     public class VxInputCheckboxComponent : VxInputBase<bool>, IDisposable
     {

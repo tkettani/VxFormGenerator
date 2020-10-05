@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace VxFormGenerator.Components.Plain
+namespace VxFormComponents.Components
 {
     public class VxInputText: InputText
     {

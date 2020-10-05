@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using VxFormGenerator;
 using VxFormGenerator.Models;
 
-namespace VxFormGenerator.Components.Plain
+namespace VxFormComponents.Components
 {
     public class InputColor: VxInputBase<VxColor>
     {

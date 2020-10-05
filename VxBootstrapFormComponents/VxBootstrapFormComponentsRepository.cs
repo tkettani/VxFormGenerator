@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using VxBootstrapFormComponents.Components;
 using VxFormGenerator;
-using VxFormGenerator.Components.Plain;
+using VxFormComponents.Components;
 using VxFormGenerator.Models;
 using VxFormGenerator.Repository;
 

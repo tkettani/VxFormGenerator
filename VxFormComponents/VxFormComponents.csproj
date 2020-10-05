@@ -1,5 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
-
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
@@ -15,9 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VxFormComponents\VxFormComponents.csproj" />
     <ProjectReference Include="..\VxFormGenerator\VxFormGenerator.csproj" />
   </ItemGroup>
-
 
 </Project>
