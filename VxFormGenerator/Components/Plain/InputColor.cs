@@ -7,10 +7,11 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using VxFormGenerator;
+using VxFormGenerator.Models;
 
-namespace FormGeneratorDemo.Components
+namespace VxFormGenerator.Components.Plain
 {
-    public class InputColor: VxInputBase<Color>
+    public class InputColor: VxInputBase<VxColor>
     {
             /// <inheritdoc />
             protected override void BuildRenderTree(RenderTreeBuilder builder)
@@ -19,12 +20,12 @@ namespace FormGeneratorDemo.Components
                 builder.AddMultipleAttributes(1, AdditionalAttributes);
                 builder.AddAttribute(2, "type", "color");
                 builder.AddAttribute(3, "class", CssClass);
-                builder.AddAttribute(5, "onchange", EventCallback.Factory.CreateBinder<Color>(this, __value => CurrentValue = __value, CurrentValue));
+                builder.AddAttribute(5, "onchange", EventCallback.Factory.CreateBinder<VxColor>(this, __value => CurrentValue = __value, CurrentValue));
                 builder.CloseElement();
             }
 
             /// <inheritdoc />
-            protected override bool TryParseValueFromString(string value, out Color result, [NotNullWhen(false)] out string validationErrorMessage)
+            protected override bool TryParseValueFromString(string value, out VxColor result, [NotNullWhen(false)] out string validationErrorMessage)
                 => throw new NotSupportedException($"This component does not parse string inputs. Bind to the '{nameof(CurrentValue)}' property, not '{nameof(CurrentValueAsString)}'.");
         }
     

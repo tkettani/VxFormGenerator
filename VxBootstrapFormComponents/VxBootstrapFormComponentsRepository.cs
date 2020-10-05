@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Components.Forms;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
 using VxBootstrapFormComponents.Components;
 using VxFormGenerator;
+using VxFormGenerator.Components.Plain;
+using VxFormGenerator.Models;
 using VxFormGenerator.Repository;
 
 namespace VxBootstrapFormComponents
@@ -20,9 +20,9 @@ namespace VxBootstrapFormComponents
                         {typeof(DateTime), typeof(InputDate<>) },
                         {typeof(bool), typeof(BootstrapInputCheckbox) },
                         {typeof(Enum), typeof(BootstrapInputSelectWithOptions<>) },
-                        {typeof(ValueReferences<Enum>), typeof(BootstrapInputCheckboxMultiple<>) },
-                        {typeof(decimal), typeof(BootstrapInputNumber<>) }
-                       // {typeof(Color).ToString(), typeof(InputColor) }
+                        {typeof(ValueReferences), typeof(BootstrapInputCheckboxMultiple<>) },
+                        {typeof(decimal), typeof(BootstrapInputNumber<>) },
+                        {typeof(VxColor), typeof(InputColor) }
                   };
             _DefaultComponent = null;
          

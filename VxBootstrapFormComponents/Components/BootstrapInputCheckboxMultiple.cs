@@ -16,11 +16,10 @@ namespace VxBootstrapFormComponents.Components
             this.AdditionalAttributes = new Dictionary<string, object>() { { "class", "form-control" } };
         }
 
-        public static void RenderChildren(RenderTreeBuilder builder,
+        public new static void RenderChildren(RenderTreeBuilder builder,
          int index,
          object dataContext,
-         string fieldIdentifier,
-         Type type)
+         string fieldIdentifier)
         {
             RenderChildren(builder, index, dataContext, fieldIdentifier, typeof(BootstrapInputCheckbox));
         }

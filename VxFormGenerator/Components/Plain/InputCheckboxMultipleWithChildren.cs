@@ -20,7 +20,7 @@ namespace VxFormGenerator.Components.Plain
             RenderChildren(builder, index, dataContext, fieldIdentifier, typeof(VxInputCheckbox));
         }
 
-        internal static void RenderChildren(RenderTreeBuilder builder,
+        protected static void RenderChildren(RenderTreeBuilder builder,
             int index,
             object dataContext,
             string fieldIdentifier,

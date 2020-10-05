@@ -16,7 +16,7 @@ namespace VxFormGenerator.Repository
             }
             else if (key.BaseType == typeof(ValueReferences))
             {
-                type = typeof(ValueReferences<Enum>);
+                type = typeof(ValueReferences);
             }
 
             return base.GetComponent(type);
